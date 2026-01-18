@@ -37,13 +37,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed  # Multithreadin
 from tqdm import tqdm      # Progress bars
 
 
-# ==========================================
-# HTTP headers for image download
-# (Custom User-Agent + Akamai access key)
-# ==========================================
+# Custom headers required for authenticated image access
+# Actual credentials are provided via environment variables
 headers = {
-    "User-Agent": "so5_imagescan",
-    "x-akamai-secret": "dd812834-4421-4a2c-bc9a-3e93d76432b4"
+    "User-Agent": os.getenv("IMAGE_USER_AGENT"),
+    "x-akamai-secret": os.getenv("IMAGE_ACCESS_TOKEN")
 }
 
 # ==========================================
@@ -888,4 +886,5 @@ def save_outputs(df, base_name="movenet_output"):
 
     # Log saved file
     print("Saved files:")
+
     print(" →", parquet_name)
