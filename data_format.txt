@@ -1,0 +1,20 @@
+DATA FORMAT (NOT INCLUDED IN REPO)
+
+The training and testing pipelines expect Excel files with the following structure.
+
+Required columns:
+1. image_url   : Publicly accessible image URL
+2. true_angle  : Ground-truth pose angle label
+
+Example schema:
+
+| image_url                          | true_angle |
+|-----------------------------------|------------|
+| https://example.com/image1.jpg    | FRONT      |
+| https://example.com/image2.jpg    | SIDE       |
+
+Notes:
+- Training data is read from: Final_Input_File.xlsx
+- Unseen / test data is read from: test_data.xlsx
+- Actual data files are excluded from this repository for privacy reasons
+- Users can plug in their own data following this format
