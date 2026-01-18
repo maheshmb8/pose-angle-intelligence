@@ -52,10 +52,11 @@ The system is designed to:
 
 ## 📁 Repository Structure
 
+```text
 Image Angle Tensor.ipynb   → Main training pipeline (feature engineering + model training)
 Testing Code.ipynb         → Inference on completely unseen images
 image_angle_func.py        → Backend utilities (MoveNet, CLIP, feature engineering)
 requirements.txt           → Python dependencies
 .gitignore                 → Excluded files (data, models, artifacts)
 data_format.txt            → Expected input data schema (no real data)
-> Note: Training and test datasets are excluded from this repository for data privacy reasons.
+Note: Training and test datasets are excluded from this repository for data privacy reasons.
